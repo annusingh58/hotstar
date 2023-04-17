@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Movie</title>
+    <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
+   <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    #screen{
+        width: 100%;
+        height: 1500px;
+        border:2px solid orange;
+    }
+    #body{
+        width:100%;
+        height: 550px;
+        border:1px solid green;
+        display: flex;
+    }
+    #sidebar{
+        width:12%;
+        height:550px;
+        border: 1px solid blue;
+        background-color: rgb(59, 58, 58);
+    }
+    #sidebar>div:nth-child(1){
+        width:50%;
+        height: 50px;
+        border:1px solid red;
+        margin-top: 20px;
+        
+
+    }
+    #sidebar>div:nth-child(1)>img{
+        width: 100%;
+        height: 100%;
+    }
+    #sidebar>div:nth-child(2){
+        margin-top: 50px;
+        padding-left: 30px;
+        
+    }
+
+    #sidebar2{
+        width:88%;
+        height: 550px;
+        border: 1px solid blue;
+    }
+    
+
+
+
+   </style>
+
+
+</head>
+<body>
+    <div id="screen">
+        <div id="body">
+
+            <div id="sidebar">
+                <div>
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/v1656431456/web-images/logo-d-plus.svg"/>
+                </div>
+                <div>
+                    <P><span><i class="fa-solid fa-earth-americas"></i></span>My space</P>
+                    <P><span><i class="fa-solid fa-magnifying-glass"></i></span> Search</P>
+                    <P><span><i class="fa-solid fa-house"></i></span>Home</P>
+                    <P><span><i class="fa-solid fa-tv"></i></span>TV</P>
+                    <p><span><i class="fa-solid fa-box-archive"></i></span>Movie</p>
+                    <p><span><i class="fa-solid fa-baseball"></i></span>Sports</p>
+                    
+                    
+                </div> 
+    
+            </div>
+            <div id="sidebar2">
+                <div></div>
+
+            </div>
+    
+        </div>
+    </div>
+
+</body>
+</html>
