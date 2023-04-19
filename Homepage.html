@@ -13,94 +13,224 @@
         box-sizing: border-box;
     }
 
-    #screen{
-        width: 100%;
-        height: 2500px;
-        border:2px solid orange;
-    }
-    #body{
-        width:100%;
-        /* height: 1550px; */
-        border:1px solid rebeccapurple;
-    
-    }
-    #body1{
-        width:100%;
-        height: 550px;
-        border:1px solid green;
-        display: flex;
-    }
-    #sidebar{
-        width:12%;
-        height:700px;
-        position: fixed;
-        left: 0;
-        border: 1px solid blue;
-        background-color: rgb(59, 58, 58);
-        position: absolute;
-    }
-    #sidebar>div:nth-child(1){
-        width:50%;
-        height: 50px;
-        border:1px solid red;
-        margin-top: 20px;
+    #screen {
+            width: 100%;
+            height: 2500px;
+            border: 2px solid orange;
+            display: flex;
+            background-color: black;
+        }
+
+        #sidebar {
+            width: 7%;
+            height: 700px;
+            position: fixed;
+            border: 1px solid blue;
+            background-color: rgb(17,20,24);
+        
+        }
+
+
+        #sidebar>div:nth-child(1) {
+            width: 95%;
+            height: 50px;
+            border: 1px solid red;
+            margin-top: 20px;
+            padding-left: 20px;
+
+
+        }
+
+        #sidebar>div:nth-child(1)>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #sidebar>div:nth-child(2) {
+            margin-top: 50px;
+            padding-left: 20px;
         
 
-    }
-    #sidebar>div:nth-child(1)>img{
-        width: 100%;
-        height: 100%;
-    }
-    #sidebar>div:nth-child(2){
-        margin-top: 50px;
-        padding-left: 30px;
+        }
+        #sidebar>div:nth-child(2)>div{
+            width:100%;
+            height: 50px;
+            /* border: 1px solid yellow; */
+            display: flex;
+            margin-top: 10px;
+            padding-left: 20px;
+
+        }
+        #sidebar>div:nth-child(2)>div>i{
+             font-size: 20px;
+             height: 40px;
+             color: gray;
+             /* border:1px solid red; */
+        }
+        #sidebar>div:nth-child(2)>div>p{
+            display: none;
+        }
+
+
+
+
+
+
+        #body {
+            width: 93%;
+            margin-left: auto;
+            /* height: 1900px; */
+            /* border: 5px solid rebeccapurple; */
+            
+
+        }
+
+
+        #movie {
+            height: 700px;
+            width: 100%;
+            /* border: 1px solid blue; */
+            background-image:linear-gradient(to top , rgba(2,5,10,2),rgba(2,2,2,0.2)), url("./1262278.jpg");
+            background-size: 100% 100%;
+        }
+
         
-    }
 
-    #sidebar2{
-        width:88%;
-        height: 550px;
-        margin-left: 12%;
-        border: 1px solid blue;
-    }
-    #sidebar2>div{
-        width: 100%;
-        height: 700px;
-    }
-    
+        #moviename {
+            width: 60%;
+            height: 700px;
+            /* border: 7px solid yellow; */
+            padding-left: 50px;
 
-    .same{
-        width:100%;
-        height: 270px;
-        border:1px solid gold;
-        background-color: black;
-    }
-    .same>h2{
-        font-size: 22px;
-        color: rgb(219, 218, 218);
-        margin-bottom: 10px;
-    }
-    .same>div{
-        display: flex;
-        justify-content: space-between;
+        }
+
+        #moviename>img {
+            font-size: 70px;
+            font-weight: bold;
+            margin-top: 280px;
+            color: rgb(35,19,6);
 
 
-    }
-    .same>div>div{
-        width: 13%;
-        height: 230px;
-        border:1px solid red;
+        }
+
+        #moviename>p:nth-child(2) {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        #moviename>p:nth-child(2)>span {
+            border: 1px solid gray;
+            margin-left: 5px;
+            background-color: gray;
+        }
+
+
+        #moviename>p:nth-child(3) {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        #moviename>p:nth-child(4)>span {
+            color: gray;
+        }
+
+        #moviename>p:nth-child(4) {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        #moviename>div {
+            height: 55px;
+            width: 70%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #moviename>div>button:nth-child(1) {
+            height: 100%;
+            width: 74%;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+        }
+
+        #moviename>div>button:nth-child(2) {
+            height: 100%;
+            width: 12%;
+            border-radius: 10px;
+            background-color: grey;
+            font-size: 30px;
+
+
+        }
+        .body1{
+            width:100%;
+            height: 300px;
+            border:1px solid red;
+            
+        }
         
         
-    }
-    .same>div>div>img{
-        width: 100%;
-        height: 100%;
-        border:1px solid yellow;
-        background-color: black;
-        
-    }
+         .body1>p{
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+      
 
+        .latest{
+            width: 100%;
+            height: 240px;
+           display: flex;
+            /* border: 1px solid yellow; */
+             justify-content: space-between;
+        }
+        .latest>div{
+            width: 13%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            /* border: 1px solid blue; */
+            overflow: hidden;
+        }
+        
+        .latest>div>img{
+            width: 100%;
+            height: 100%;
+            scale:1.1;
+            object-fit: cover;
+        
+        }
+        .latest>div:hover{
+            transform: scale(1.8,1.5);
+            z-index: 2;
+            border: 1px solid yellow;
+            object-fit: cover;
+
+        }
+        .latest>div:hover .info{
+            display: block;
+        }
+        .info{
+            
+            border:1px solid yellow;
+            z-index: 4;
+            position: relative;
+            height:0px;
+            top: 100px;
+            padding: 10px;
+            display: none;
+        
+        
+        }
 
 
    </style>
@@ -109,66 +239,107 @@
 </head>
 <body>
     <div id="screen">
-        <div id="body">
-
-           <div id="body1">
             <div id="sidebar">
                 <div>
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/v1656431456/web-images/logo-d-plus.svg"/>
+                    <img
+                        src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/v1656431456/web-images/logo-d-plus.svg" />
                 </div>
                 <div>
-                    <P><span><i class="fa-solid fa-earth-americas"></i></span>My space</P>
-                    <P><span><i class="fa-solid fa-magnifying-glass"></i></span> Search</P>
-                    <P><span><i class="fa-solid fa-house"></i></span>Home</P>
-                    <P><span><i class="fa-solid fa-tv"></i></span>TV</P>
-                    <p><span><i class="fa-solid fa-box-archive"></i></span>Movie</p>
-                    <p><span><i class="fa-solid fa-baseball"></i></span>Sports</p>
-                    
-                    
-                </div> 
+                    <div>
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <p>My Space</p>
+    
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>Search</p>
+    
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                        <p>Home</p>
+    
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-tv"></i>
+                        <p>TV</p>
+    
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-box-archive"></i>
+                        <p>Movies</p>
+    
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-baseball"></i>
+                        <p>Sports</p>
+                    </div>
+    
+    
+                </div>
     
             </div>
-            <div id="sidebar2">
-                <div>
-                    <!-- <video controls width="550">
-                        <source src="https://www.youtube.com/watch?v=rer9Vg1TaYM">
-                        </video> -->
-                </div>
-                <div class="same">
-                    <h2>Latest & Trending</h2>
-                    <div>
+            <div id="body">
+                <div id="movie">
+                    <div id="moviename">
+                        <img src="https://img1.hotstarext.com/image/upload/f_auto,h_136/sources/r1/cms/prod/7773/1367773-t-d0d007d150e9"/>
+                        <p>2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
+                        <p>Under the british Raj,two revolutionaries with personsal agendas forge a friendship,only to find
+                            each othre on opposing sides.</p>
+                        <p>Action | Drama</p>
+    
                         <div>
-                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/361/1500361-v-b4b09b222ec6"/>
-                        </div>
-                        <div>
-                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/4967/1494967-v-2b16e4e00bb1"/>
-                        </div>
-                        <div>
-                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/9415/1489415-v-dd3f07efdbc3"/>
-                        </div>
-                        <div>
-                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/1926/1481926-v-87f998eca02e"/>
-                        </div>
-                        <div>
-                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/1740/1481740-v-a55b1b24dabf"/>
-                        </div>
-                        <div>
-                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/9273/1479273-v-c3a3c07fe35c"/>
-                        </div>
-                        <div>
-                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/8739/1478739-v-4b473ba61414"/>
+                            <button><span><i class="fa-solid fa-arrow-right"></i></span> Watch Now</button>
+                            <button>+</button>
                         </div>
                     </div>
-        
-        
-                   </div>
-            </div>
-           </div>
-           
+    
+                </div>
+                <div class ="body1">
+                  
+                            <p>Latest & trending</p>
+                            
+                        
+                        <div  class="latest">
 
-        </div>
+                          <div>
+                            <div class = "info">
+
+                                <button>Watch Now</button>
+                                <p>2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
+                                 <p>Under the british Raj,two revolutionaries with personsal agendas forge a friendship,only to find
+                                     each othre on opposing sides.</p>
+
+
+                            </div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/361/1500361-v-b4b09b222ec6"/>
+                          </div>
+                          <div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/4967/1494967-v-2b16e4e00bb1" alt="hotstar"/>
+                          </div>
+                        <div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/9415/1489415-v-dd3f07efdbc3" alt="hotstar"/>
+                        </div>
+                        <div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/1740/1481740-v-a55b1b24dabf" alt ="hotstar"/>
+                        </div>
+                        <div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/9273/1479273-v-c3a3c07fe35c" alt="hotstar"/>
+                        </div>
+                        <div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/8739/1478739-v-4b473ba61414"alt="hotstar"/>
+                        </div>
+                        <div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/8442/1478442-v-c0f317dcf6a8"alt="hotstar"/>
+                        </div>
+                     </div>
+                    
+                </div>
+               
        
-    </div>
+            </div>
+   </div>
+
 
 </body>
 </html>
