@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartMovie</title>
+    <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        #screen{
+            /* height: 1500px; */
+            width: 100%;
+            /* border: 1px solid orange; */
+            background-color: black;
+            display: flex;
+        }
+        #sidebar {
+            width: 7%;
+            height: 700px;
+            position: fixed;
+            /* border: 1px solid blue; */
+            /* background-color: rgb(17,20,24); */
+
+        }
+
+        #sidebar:hover {
+            width: 11%;
+            /* position: relative; */
+            z-index: 5;
+            background-image: linear-gradient(to top, rgba(2, 5, 10, 2), rgba(2, 2, 2, 0.2));
+        }
+
+        .sideimg {
+            width: 95%;
+            height: 50px;
+            /* border: 1px solid red; */
+            margin-top: 25px;
+            padding-left: 15px;
+
+
+        }
+
+        #sidebar:hover .sideimg {
+            width: 60%;
+            /* border:3px solid yellow; */
+            /* height:50px ; */
+        }
+
+
+
+        .sidebarcontent {
+            /* margin-top: 50px; */
+            /* padding-left: 20px; */
+            /* border:1px solid red; */
+            margin-top: 100px;
+            width: 100%;
+        }
+
+        .sidediv {
+            width: 100%;
+            height: 60px;
+            /* border: 1px solid yellow; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* margin-top: 10px; */
+            padding-left: 20px;
+
+        }
+
+        #icon {
+            width: 50%;
+            /* border:1px solid red; */
+            margin: auto;
+            padding-top: 10px;
+            position: fixed;
+        }
+
+        .sidediv:hover .iconp {
+            display: block;
+        }
+
+        .sidediv:hover #icon {
+            /* border:3px solid red; */
+            color: white;
+        }
+
+        .sidediv>i {
+            font-size: 20px;
+            height: 40px;
+            color: rgb(61, 60, 60);
+            /* margin-top: 20px; */
+            /* border:1px solid red; */
+        }
+
+        .iconp {
+            display: none;
+            width: 68%;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: auto;
+            /* border:1px solid yellow; */
+        }
+        #body{
+            width: 93%;
+            margin-left: auto;
+            /* height: 700px; */
+            /* border:1px solid red; */
+            /* background-color: white; */
+        }
+        #body>h1{
+            width:100%;
+            height:50px;
+            /* border:5px solid yellow; */
+            color: white;
+            /* margin-left: 40px; */
+        }
+        .body1{
+            display: flex;
+            width:100%;
+            margin-top: 30px;
+            /* height: 650px; */
+            /* border:1px solid blue; */
+            justify-content: space-between;
+        }
+        .left{
+            width:60%;
+            /* height:600px; */
+            /* border:1px solid red; */
+        }
+        .left1{
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            /* border:1px solid green; */
+        }
+       
+        .left1>div:nth-child(1){
+            height: 100%;
+            width:25%;
+            /* border:1px solid white; */
+        }
+        .left1>div:nth-child(1)>img{
+            height: 100%;
+            width: 100%;
+        }
+        .left1>div:nth-child(2){
+            height:100%;
+            width:50%;
+            /* border:1px solid red; */
+            color:gray;
+            padding-left: 10px;
+
+        }
+        .left1>div:nth-child(2)>h3{
+            font-size: 25px;
+            margin-top: 10px;
+        }
+        .left1>div:nth-child(2)>p{
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .left1>div:nth-child(2)>button{
+            margin-top: 20px;
+            height: 35px;
+            width: 50%;
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+        }
+
+
+
+        .left1>div:nth-child(3){
+            height:100%;
+            width:20%;
+            /* border:1px solid green; */
+            color: gray;
+            padding-left: 10px;
+            text-align: center;
+
+        }
+        .left1>div:nth-child(3)>p{
+            font-size: 12px;
+        }
+        .left1>div:nth-child(3)>i{
+            margin-top: 15px;
+            font-size:25px
+        }
+
+
+
+
+        .right{
+            width:38%;
+            height: 200px;
+            border:1px solid gray;
+            padding-left: 10px;
+        }
+        .right>h3{
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid gray;
+            color: white;
+            margin-top: 10px;
+        }
+        
+        .right>div{
+            display: flex;
+            width:80%;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+        .right>div>div>p:nth-child(4){
+            font-size: 20px;
+        }
+        .right>div>div>p{
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width:920px) {
+           
+            .body1{
+                flex-direction: column-reverse;
+            }
+            .right{
+                width:80%;
+                margin: auto;
+            }
+            .left{
+                 width:80%;
+                margin: auto;
+            }
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div id="sidebar">
+            <div class="sidebarimg">
+                <img class="sideimg"
+                    src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/v1656431456/web-images/logo-d-plus.svg" />
+            </div>
+            <div class="sidebarcontent">
+                <div class="sidediv">
+                    <i id="icon" class="fa-solid fa-earth-americas"></i>
+                    <p class="iconp">My Space</p>
+
+                </div>
+                <div class="sidediv">
+                    <i id="icon" class="fa-solid fa-magnifying-glass"></i>
+                    <p  class="iconp">Search</p>
+
+                </div>
+                <div class="sidediv">
+                    <i id="icon" class="fa-solid fa-house"></i>
+                    <p  class="iconp">Home</p>
+
+                </div>
+                <div class="sidediv">
+                    <i id="icon" class="fa-solid fa-tv"></i>
+                    <p  class="iconp">TV</p>
+
+                </div>
+                <div class="sidediv">
+                    <i id="icon" class="fa-solid fa-box-archive"></i>
+                    <p  class="iconp">Movies</p>
+
+                </div>
+                <div class="sidediv">
+                    <i id="icon" class="fa-solid fa-baseball"></i>
+                    <p  class="iconp">Sports</p>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div id="body">
+            <h1>Movie Cart</h1>
+            <div class="body1">
+            
+                <div class="left">
+                    <div class="left1">
+                        <div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/7588/177588-v"/>
+                        </div>
+                        <div>
+                            <h3>PRISONBREAK</h3>
+                            <p>2017 .5 Seasons .English .U/A 16+</p>
+                            <p>Action | Mystery</p>
+                            <button>Wacth Now</button>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-plus"></i><p>Add</p>
+                            <i class="fa-solid fa-circle-down"></i><p>Download</p>
+                            <i class="fa-solid fa-share"></i><p>Share</p>
+
+
+                        </div>
+                    </div>
+                    <div class="left1">
+                        <div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/9415/1489415-v-dd3f07efdbc3"/>
+                        </div>
+                        <div>
+                            <h3>POP KAUN ?</h3>
+                            <p>2023 .Hindi .U/A 16+</p>
+                            <p>Action | Mystery</p>
+                            <button>Wacth Now</button>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-plus"></i><p>Add</p>
+                            <i class="fa-solid fa-circle-down"></i><p>Download</p>
+                            <i class="fa-solid fa-share"></i><p>Share</p>
+
+
+                        </div>
+                    </div>
+                    <div class="left1">
+                        <div>
+                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/4967/1494967-v-2b16e4e00bb1"/>
+                        </div>
+                        <div>
+                            <h3>GASLIGHT</h3>
+                            <p>2023.English .U/A 16+</p>
+                            <p>Action | Mystery</p>
+                            <button>Wacth Now</button>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-plus"></i><p>Add</p>
+                            <i class="fa-solid fa-circle-down"></i><p>Download</p>
+                            <i class="fa-solid fa-share"></i><p>Share</p>
+
+
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="right">
+                    <h3>Total Summery</h3>
+                 <div>   
+                    <div>
+                    <p>Amount</p>
+                    <p>Discount  </p>
+                    <p>Delivery Charge </p>
+                    <p>Total Amount  </p>
+                
+                    </div>
+                    <div>
+            
+                        <p>499  </p>
+                        <p>-50 </p>
+                        <p>Free  </p>
+                        <p>1447 </p>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>  
+            </div>
+        </div>
+       
+            
+            
+                
+
+        </div>
+    
+    
+</body>
+</html>
