@@ -15,7 +15,7 @@
 
     #screen {
             width: 100%;
-            height: 2500px;
+            /* height: 2500px; */
             border: 2px solid orange;
             display: flex;
             background-color: black;
@@ -231,6 +231,112 @@
         
         
         }
+
+         .sport{
+            width:100%;
+            height: 270px;
+            border:1px solid red;
+            
+        }
+        .sport>p{
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .match{
+            width:100%;
+            height: 200px;
+            display: flex;
+            border:1px solid yellow;
+            justify-content: space-between;
+            
+        }
+        .match>div{
+            width: 18%;
+            height: 100%;
+             position: relative;
+             
+            z-index: 1;
+            border: 1px solid blue;
+            overflow: hidden;
+
+        }
+         .match>div>img{
+            width: 100%;
+            height: 100%;
+            /* scale:1.1; */
+            /* object-fit: cover; */
+        
+        }
+         .match>div:hover{
+            transform: scale(1.8,1.5);
+            z-index: 2;
+            border: 1px solid yellow;
+            object-fit: cover;
+
+        }
+
+
+        #footer{
+            height: 300px;
+            width: 100%;
+            /* border: 5px solid red; */
+            color: white;
+            margin-top: 55px;
+            display: flex;
+            
+           }
+           #footer>div{
+            width:25% ;
+            height: 300px;
+            margin:auto;
+            border-bottom: 2px solid gray;
+           }
+          
+           #footer>div>h4{
+            margin-top: 55px;
+             margin-left: px; 
+             margin-bottom: 35px;
+            font-size: 20px;
+            color: white;
+
+           }
+           #footer>div>p{
+            margin-top: 20px;
+            font-size: 20px;
+            color:grey;
+           }
+           #footer>div:nth-child(4)>div:nth-child(2){
+            height: 30px;
+            width: 40%;
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: space-between;
+           }
+           #footer>div:nth-child(4)>div:nth-child(2)>i{
+            height: 100%;
+            width: 100%;
+            font-size: 23px;
+
+           }
+           #footer>div:nth-child(4)>div:nth-child(3){
+            display: flex;
+            width:100%;
+            height: 55px;
+            margin-top: 15px;
+            justify-content: space-between;
+            /* border:1px solid red; */
+           }
+           #footer>div:nth-child(4)>div:nth-child(3)>img{
+            height: 100%;
+            width: 50%;
+            margin-left: -10px;
+           }
+
+
+
+        
 
 
    </style>
@@ -496,20 +602,54 @@
             
                  </div>
 
-                 <div class ="sports">
+                 <div class ="sport">
                     <p>Best in Sports<p>
                         <div class="match">
-                            <div><img src=""/></div>
-                            <div><img src=""/></div>
-                            <div><img src=""/></div>
-                            <div><img src=""/></div>
-                            <div><img src=""/></div>
+                            <div><img src="./sports1.jpeg"/>
+                                
+                            </div>
+                            <div><img src="./sports1.jpeg"/></div>
+                            <div><img src="./sports1.jpeg"/></div>
+                            <div><img src="./sports1.jpeg"/></div>
+                            <div><img src="./sports1.jpeg"/></div>
 
                                 
                             
                         </div>
 
                  </div>
+                 <div id="footer">
+                    <div>
+                        <h4>Company</h4>
+                        <p>About Us</p>
+                        
+                        
+                    </div>
+                    <div>
+                        <h4>View Website in</h4>
+                        <p>English</p>
+                        
+                    </div>
+                    <div>
+                        <h4>Need Help ?</h4>
+                        <p>Visit Help Center</p>
+                        <p>Share Feedback </p>
+                        
+    
+                    </div>
+                    <div>
+                        <h4>Connect with Us</h4>
+                        <div>
+                            <i class="fa-brands fa-facebook-f"></i> 
+                            <i class="fa-brands fa-square-twitter"></i>
+                        </div>
+                        <div>
+                            <img src="./apple store.webp"/>
+                            <img src="./googleplay.webp"/>
+                        </div>
+                    </div>
+                </div>
+    
                
        
             </div>
