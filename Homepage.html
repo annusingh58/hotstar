@@ -16,7 +16,7 @@
     #screen {
             width: 100%;
             /* height: 2500px; */
-            border: 2px solid orange;
+            /* border: 2px solid orange; */
             display: flex;
             background-color: black;
         }
@@ -25,50 +25,80 @@
             width: 7%;
             height: 700px;
             position: fixed;
-            border: 1px solid blue;
-            background-color: rgb(17,20,24);
+            /* border: 1px solid blue; */
+            /* background-color: rgb(17,20,24); */
         
         }
-
-
-        #sidebar>div:nth-child(1) {
+        #sidebar:hover{
+            width:11%;
+            /* position: relative; */
+            z-index: 5;
+            background-image:linear-gradient(to top , rgba(2,5,10,2),rgba(2,2,2,0.2));
+        }
+        .sideimg {
             width: 95%;
             height: 50px;
-            border: 1px solid red;
-            margin-top: 20px;
-            padding-left: 20px;
+            /* border: 1px solid red; */
+            margin-top: 25px;
+            padding-left: 15px;
 
 
         }
-
-        #sidebar>div:nth-child(1)>img {
-            width: 100%;
-            height: 100%;
+        #sidebar:hover .sideimg{
+            width: 60%;
+            /* border:3px solid yellow; */
+            /* height:50px ; */
         }
 
-        #sidebar>div:nth-child(2) {
-            margin-top: 50px;
-            padding-left: 20px;
-        
+     
 
-        }
-        #sidebar>div:nth-child(2)>div{
+        .sidebarcontent {
+            /* margin-top: 50px; */
+            /* padding-left: 20px; */
+            /* border:1px solid red; */
+            margin-top: 100px;
             width:100%;
-            height: 50px;
+        }
+        .sidediv{
+            width:100%;
+            height: 60px;
             /* border: 1px solid yellow; */
             display: flex;
-            margin-top: 10px;
+            justify-content: space-between;
+            align-items: center;
+            /* margin-top: 10px; */
             padding-left: 20px;
 
         }
-        #sidebar>div:nth-child(2)>div>i{
+        #icon{
+            width:50%;
+            /* border:1px solid red; */
+            margin: auto;
+            padding-top: 10px;
+            position: fixed;
+        }
+        .sidediv:hover .iconp{
+            display: block;
+        }
+        .sidediv:hover #icon{
+            /* border:3px solid red; */
+            color: white;
+        }
+       .sidediv>i{
              font-size: 20px;
              height: 40px;
-             color: gray;
+             color: rgb(61, 60, 60);
+             /* margin-top: 20px; */
              /* border:1px solid red; */
         }
-        #sidebar>div:nth-child(2)>div>p{
+        .iconp{
             display: none;
+            width:68%;
+            color:white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: auto;
+            /* border:1px solid yellow; */
         }
 
 
@@ -172,15 +202,18 @@
 
         }
         .body1{
-            width:100%;
-            height: 300px;
-            border:1px solid red;
+            width:99%;
+            margin-left: auto;
+            /* height: 300px; */
+            /* border:1px solid red; */
             
         }
         
         
          .body1>p{
             font-size: 25px;
+            margin-bottom: 15px;
+            margin-top: 15px;
             font-weight: bold;
             color: white;
         }
@@ -188,16 +221,18 @@
 
         .latest{
             width: 100%;
-            height: 240px;
+            /* height: 240px; */
            display: flex;
+           position: relative;
+           flex: 1;
             /* border: 1px solid yellow; */
              justify-content: space-between;
         }
         .latest>div{
             width: 13%;
-            height: 100%;
+            height: 240px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
             /* border: 1px solid blue; */
             overflow: hidden;
         }
@@ -207,39 +242,35 @@
             height: 100%;
             scale:1.1;
             object-fit: cover;
-        
+            position: relative;
+            z-index: 3;
         }
         .latest>div:hover{
             transform: scale(1.8,1.5);
-            z-index: 2;
-            border: 1px solid yellow;
+            z-index: 4;
+            /* border: 1px solid yellow; */
             object-fit: cover;
 
         }
-        .latest>div:hover .info{
-            display: block;
-        }
         .info{
-            
-            border:1px solid yellow;
-            z-index: 4;
+            z-index: 10;
             position: relative;
-            height:0px;
-            top: 100px;
-            padding: 10px;
-            display: none;
-        
-        
+            /* height: 40%; */
+            /* margin-top: -50%; */
+            /* border:1px solid yellow; */
+            color:white;
+            /* margin-top:70px; */
+            padding-left:5px;
         }
-
          .sport{
             width:100%;
             height: 270px;
-            border:1px solid red;
+            /* border:1px solid red; */
             
         }
         .sport>p{
             font-size: 25px;
+            margin-bottom: 15px;
             font-weight: bold;
             color: white;
         }
@@ -248,7 +279,7 @@
             width:100%;
             height: 200px;
             display: flex;
-            border:1px solid yellow;
+            /* border:1px solid yellow; */
             justify-content: space-between;
             
         }
@@ -258,7 +289,7 @@
              position: relative;
              
             z-index: 1;
-            border: 1px solid blue;
+            /* border: 1px solid blue; */
             overflow: hidden;
 
         }
@@ -334,6 +365,24 @@
             margin-left: -10px;
            }
 
+           @media screen and (max-width:920px) {
+          
+            #moviename>img{
+                margin-top: 170px;
+            }
+            .latest>div:nth-child(7){
+                display: none;
+            }
+            .latest{
+                flex-wrap: wrap;
+            }
+            .latest>div{
+                width: 30%;
+                margin-bottom: 15px;
+            }
+           }
+
+
 
 
         
@@ -346,39 +395,39 @@
 <body>
     <div id="screen">
             <div id="sidebar">
-                <div>
-                    <img
+                <div class="sidebarimg">
+                    <img class="sideimg"
                         src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/v1656431456/web-images/logo-d-plus.svg" />
                 </div>
-                <div>
-                    <div>
-                        <i class="fa-solid fa-earth-americas"></i>
-                        <p>My Space</p>
+                <div class="sidebarcontent">
+                    <div class="sidediv">
+                        <i id="icon" class="fa-solid fa-earth-americas"></i>
+                        <p class="iconp">My Space</p>
     
                     </div>
-                    <div>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <p>Search</p>
+                    <div class="sidediv">
+                        <i id="icon" class="fa-solid fa-magnifying-glass"></i>
+                        <p  class="iconp">Search</p>
     
                     </div>
-                    <div>
-                        <i class="fa-solid fa-house"></i>
-                        <p>Home</p>
+                    <div class="sidediv">
+                        <i id="icon" class="fa-solid fa-house"></i>
+                        <p  class="iconp">Home</p>
     
                     </div>
-                    <div>
-                        <i class="fa-solid fa-tv"></i>
-                        <p>TV</p>
+                    <div class="sidediv">
+                        <i id="icon" class="fa-solid fa-tv"></i>
+                        <p  class="iconp">TV</p>
     
                     </div>
-                    <div>
-                        <i class="fa-solid fa-box-archive"></i>
-                        <p>Movies</p>
+                    <div class="sidediv">
+                        <i id="icon" class="fa-solid fa-box-archive"></i>
+                        <p  class="iconp">Movies</p>
     
                     </div>
-                    <div>
-                        <i class="fa-solid fa-baseball"></i>
-                        <p>Sports</p>
+                    <div class="sidediv">
+                        <i id="icon" class="fa-solid fa-baseball"></i>
+                        <p  class="iconp">Sports</p>
                     </div>
     
     
@@ -408,18 +457,17 @@
                         
                         <div  class="latest">
 
-                          <div>
-                            <div class = "info">
-
-                                <button>Watch Now</button>
-                                <p>2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
-                                 <p>Under the british Raj,two revolutionaries with personsal agendas forge a friendship,only to find
-                                     each othre on opposing sides.</p>
-
-
+                          
+                            <div>
+                                <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/361/1500361-v-b4b09b222ec6"/>
+                                <div class="info">
+                                    <button>Watch Now</button>
+                                    <p>2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
+                                     <p>Under the british Raj,two revolutionaries with personsal agendas forge a friendship,only to find
+                                         each othre on opposing sides.</p>
+                                </div>
                             </div>
-                            <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/361/1500361-v-b4b09b222ec6"/>
-                          </div>
+                             
                           <div>
                             <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/4967/1494967-v-2b16e4e00bb1" alt="hotstar"/>
                           </div>
@@ -449,27 +497,32 @@
                 <div  class="latest">
 
                   <div>
-                    <div class = "info">
-
-                        <button>Watch Now</button>
-                        <p>2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
-                         <p>Under the british Raj,two revolutionaries with personsal agendas forge a friendship,only to find
-                             each othre on opposing sides.</p>
-
-
-                    </div>
                     <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/5545/675545-v" alt="hotstar"/>
-                  </div>
+                   
+                
+                </div>
                   <div>
                     <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/old_images/vertical/MOVIE/2810/1000062810/1000062810-v" alt="hotstar"/>
                   </div>
                 <div>
                     <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/old_images/vertical/MOVIE/5017/1000055017/1000055017-v" alt="hotstar"/>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                     <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/7588/177588-v" alt="hotstar"/>
+
+                </div>
+                <div>
+                      <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/2599/1412599-v-eff712795217" alt="hotstar"/>
+
+                </div>
+                <div>
+                     <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/361/1500361-v-b4b09b222ec6"/>
+
+                </div>
+                <div>
+                     <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/old_images/vertical/MOVIE/5483/1770015483/1770015483-v" alt="hotstar"/>
+
+                </div>
                 
              </div>
             
@@ -482,15 +535,6 @@
                 <div  class="latest">
 
                   <div>
-                    <div class = "info">
-
-                        <button>Watch Now</button>
-                        <p>2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
-                         <p>Under the british Raj,two revolutionaries with personsal agendas forge a friendship,only to find
-                             each othre on opposing sides.</p>
-
-
-                    </div>
                     <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/7588/177588-v" alt="hotstar"/>
                   </div>
                   <div>
@@ -525,15 +569,6 @@
                 <div  class="latest">
 
                   <div>
-                    <div class = "info">
-
-                        <button>Watch Now</button>
-                        <p>2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
-                         <p>Under the british Raj,two revolutionaries with personsal agendas forge a friendship,only to find
-                             each othre on opposing sides.</p>
-
-
-                    </div>
                     <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/9415/1489415-v-dd3f07efdbc3" alt="hotstar"/>
                   </div>
                   <div>
@@ -567,15 +602,6 @@
                 <div  class="latest">
 
                   <div>
-                    <div class = "info">
-
-                        <button>Watch Now</button>
-                        <p>2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
-                         <p>Under the british Raj,two revolutionaries with personsal agendas forge a friendship,only to find
-                             each othre on opposing sides.</p>
-
-
-                    </div>
                     <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/6475/1436475-v-3b7f779b3476" alt="hotstar"/>
                   </div>
                   <div>
