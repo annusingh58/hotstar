@@ -118,10 +118,13 @@
             <div id="right">
                 <i class="fa-solid fa-xmark"></i>
                 <h2>Login To Contiue</h2>
-                <div>
-                    <div><input type="email" placeholder="Enter Email Id"/></div>
-                    <div><input type="password"placeholder="Enter Password"/></div>
-                </div>
+
+                <form onsubmit="login(event)">
+                 <input id="lemail" type="email" placeholder="enter your email"/> </br></br>
+                <input id="lpassword" type="password" placeholder="enter your password"/> </br> </br>
+                 <input type="submit" value="Login"/>
+
+                 </form> 
                 
                 <P> By Proceeding You confirm that you are above 18 years of age and agree to the <span>Privacy Policy & Terms of use</span></P>
                 <h3>Having trouble Logging in ? <span>Get Help</span></h3>
@@ -130,5 +133,6 @@
         </div>
 
     </div>
+    <script src="./server.js"></script>
 </body>
 </html>

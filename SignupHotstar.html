@@ -96,14 +96,7 @@
         #right>h3>span{
             color: rgb(36,118,240);
         }
-        #right>button{
-            height: 45px;
-            width: 30%;
-            margin-top: 50px;
-            background-color: rgb(36,118,240);
-            border: none;
-            margin-left: 100px;
-        }
+       
         @media screen and (max-width:920px) {
             #left{
                 display: none;
@@ -125,19 +118,22 @@
                 <div id="right">
                     <i class="fa-solid fa-xmark"></i>
                     <h2>Sign Up</h2>
-                    <div>
-                        <div><input type="number" placeholder="Mobile Number..."/></div>
-                        <div><input type="email" placeholder="Enter Email Id"/></div>
-                        <div><input type="password"placeholder="Enter Password"/></div>
-                    </div>
+                   <form onsubmit="signup(event)">
+                       <input id="name" type="text" placeholder="Name"/></br>
+                        <input id="email" type="email" placeholder="Enter Email Id"/></br>
+                        <input id="password" type="password"placeholder="Enter Password"/></br>
+                        <input id="confirmpassword" type="password"placeholder="enterconfirmpassword"/></br>
+                        <input type="submit" value="Signup"/>
+                     </form>
                     
                     <h3>By continuing, I agree to <span><u>Terms of Use & Privacy Policy</u></span></h3>
-                    <button>Signup</button>
+                    
                 </div>
     
             </div>
     
         </div>
+        <script src="./server.js"></script>
     
 </body>
 </html>
