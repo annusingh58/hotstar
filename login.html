@@ -97,6 +97,28 @@
             color: rgb(36,118,240);
         }
 
+        
+       #form{
+            /* height: 300px; */
+            width: 100%;
+            /* border:1px solid red; */
+            margin-bottom: 20px;
+        }
+        #form>div>input{
+            height: 40px;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            padding-left: 5px;
+            border:1px solid gray;
+        }
+        #form>div:nth-child(3)>input{
+            width: 50%;
+            margin-left:80px;
+            background-color: grey;
+            color: white;
+        }
+
         @media screen and (max-width:920px) {
             #left{
                 display: none;
@@ -120,9 +142,12 @@
                 <h2>Login To Contiue</h2>
 
                 <form onsubmit="login(event)">
-                 <input id="lemail" type="email" placeholder="enter your email"/> </br></br>
-                <input id="lpassword" type="password" placeholder="enter your password"/> </br> </br>
-                 <input type="submit" value="Login"/>
+                 <div id="form">
+                    <div id="form">
+                        <div><input id="lemail" type="email" placeholder="Enter Email Id"/></br></div>
+                        <div><input id="lpassword" type="password" placeholder="password"/></br></div>
+                        <div><input type="submit" value="login"/></div>
+                       </div>
 
                  </form> 
                 

@@ -96,6 +96,26 @@
         #right>h3>span{
             color: rgb(36,118,240);
         }
+
+        #form{
+            height: 250px;
+            width: 100%;
+            /* border:1px solid red; */
+        }
+        #form>div>input{
+            height: 40px;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            padding-left: 5px;
+            border:1px solid gray;
+        }
+        #form>div:nth-child(5)>input{
+            width: 50%;
+            margin-left:80px;
+            background-color: gray;
+            color: white;
+        }
        
         @media screen and (max-width:920px) {
             #left{
@@ -119,11 +139,14 @@
                     <i class="fa-solid fa-xmark"></i>
                     <h2>Sign Up</h2>
                    <form onsubmit="signup(event)">
-                       <input id="name" type="text" placeholder="Name"/></br>
-                        <input id="email" type="email" placeholder="Enter Email Id"/></br>
-                        <input id="password" type="password"placeholder="Enter Password"/></br>
-                        <input id="confirmpassword" type="password"placeholder="enterconfirmpassword"/></br>
-                        <input type="submit" value="Signup"/>
+                    <div id="form">
+                        <div><input id="name" type="text" placeholder="Name"/></br></div>
+                        <div><input id="email" type="email" placeholder="Enter Email Id"/></br></div>
+                        <div><input id="password" type="password" placeholder="password"/></br></div>
+                        <div><input id="confirmpassword" type="password" placeholder="confirmpassword"/></br></div>
+                        <div><input type="submit" value="Signup"/></div>
+    
+                    </div>
                      </form>
                     
                     <h3>By continuing, I agree to <span><u>Terms of Use & Privacy Policy</u></span></h3>
