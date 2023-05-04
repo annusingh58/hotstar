@@ -365,6 +365,32 @@
             margin-left: -10px;
            }
 
+
+           #productsT{
+            width:100%;
+            height:300px;
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: space-between;
+           }
+           #singlePro{
+            width:24%;
+            height:300px;
+            /* border:1px solid grey; */
+            text-align: center;
+           }
+           #singlePro>img{
+            width: 100%;
+            height: 80%;
+
+           }
+           #singlePro>h3{
+            color: white;
+           }
+           #singlePro>p{
+            color: white;
+           }
+
            @media screen and (max-width:920px) {
           
             #moviename>img{
@@ -452,7 +478,8 @@
                     </div>
     
                 </div>
-                <div class ="body1">
+                <div id="productsT"></div>
+                <!-- <div class ="body1">
                   
                             <p>Latest & trending</p>
                             
@@ -645,7 +672,7 @@
                             
                         </div>
 
-                 </div>
+                 </div> -->
                  <div id="footer">
                     <div>
                         <h4>Company</h4>
@@ -684,6 +711,24 @@
    </div>
    <script>
     window.onload=function(){
+
+
+        var divtoshowproduct=document.getElementById("productsT");
+        var finalData="";
+        var productFromLS=JSON.parse(localStorage.getItem("product"));
+        for(i=0;i<productFromLS.length;i++){
+            finalData+=`<div id="singlePro">
+                <img src=${productFromLS[i].proimage} />
+                <h3>${productFromLS[i].proname}</h3>
+                <p>${productFromLS[i].proprice}</p>
+                </div>`
+
+        }
+        console.log(finalData,"finalData here");
+        divtoshowproduct.innerHTML=finalData;
+
+
+
         // alert("working");
         var user= JSON.parse(localStorage.getItem("login"));
         var div=document.getElementById("switch");
