@@ -399,10 +399,12 @@
                     <img class="sideimg"
                         src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/v1656431456/web-images/logo-d-plus.svg" />
                 </div>
+                <div id="Logout"></div>
                 <div class="sidebarcontent">
                     <div class="sidediv">
                         <i id="icon" class="fa-solid fa-earth-americas"></i>
-                        <p class="iconp">My Space</p>
+                        <p id="switch" class="iconp">My Space</p>
+                        
     
                     </div>
                     <div class="sidediv">
@@ -680,6 +682,26 @@
        
             </div>
    </div>
+   <script>
+    window.onload=function(){
+        // alert("working");
+        var user= JSON.parse(localStorage.getItem("login"));
+        var div=document.getElementById("switch");
+        var divforLogout=document.getElementById("Logout");
+        var name=`<p>${user.uname}</p>`;
+        var button = `<button onclick ="Logout()">Logout</button>`;
+        div.innerHTML=name;
+        divforLogout.innerHTML=button;
+    }
+
+    function Logout(){
+        alert("Logout successful");
+        localStorage.removeItem("login");
+        window.location.reload();
+
+    }
+
+   </script>
 
 
 </body>
