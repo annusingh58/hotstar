@@ -390,6 +390,19 @@
             }
         }
     </style>
+    <script>
+        window.onload = function () {
+            var product = JSON.parse(localStorage.getItem("current-product"));
+    
+            var divToAppendProduct = document.getElementById("left");
+            var structure = `<div> <img src='${product.proimage}' /></div><div> <img src='${product.proimage}' /> <br/> <h1>${product.proname}</h1><br/> <p>${product.proprice}</p><br/> <button onclick='addCart()'>Add to cart</button> </div>`;
+            console.log(structure, "here");
+            divToAppendProduct.innerHTML = structure;
+        }
+        function addCart(){
+            alert("Adding to cart")
+        }
+    </script>
 
 
 </head>
