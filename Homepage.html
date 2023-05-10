@@ -478,8 +478,8 @@
                     </div>
     
                 </div>
-                <!-- <div id="productsT"></div> -->
-                <div class ="body1">
+                 <div id="productsT"></div>
+                <!-- <div class ="body1">
                   
                             <p>Latest & trending</p>
                             
@@ -517,7 +517,7 @@
                         </div>
                      </div>
                     
-                </div>
+                </div> -->
                 <div class ="body1">
                   
                     <p>Watchlist</p>
@@ -709,45 +709,45 @@
        
             </div>
    </div>
-   <script>
+
+      <script>
     window.onload=function(){
-
-
-        var divtoshowproduct=document.getElementById("productsT");
-        var finalData="";
-        var productFromLS=JSON.parse(localStorage.getItem("product"));
-        for(i=0;i<productFromLS.length;i++){
-            finalData+=`<div id="singlePro">
-                <img src=${productFromLS[i].proimage} />
-                <h3>${productFromLS[i].proname}</h3>
-                <p>${productFromLS[i].proprice}</p>
-                </div>`
-
+        // alert("working")
+        var loginuser=JSON.parse(localStorage.getItem("hloginuser"))
+        var divformovies=document.getElementById("product")
+            var finaldata="";
+            var moviefromls=JSON.parse(localStorage.getItem("hmovies"));
+            for(var i=0;i<productfromls.length;i++){
+                finaldata+=`<div onClick ='redirect(${JSON.stringify(productfromls[i])})'id="singlemovie"><img src="${moviefromls[i].addurl}" /></div>`
+            }
+            console.log(finaldata,"finaldata here");
+            divformovies.innerHTML=finaldata;
+        // console.log(loginuser)
+        if(!!loginuser){
+            var div=document.getElementById("switch");
+            var divforlogout=document.getElementById("logout");
+           
+            console.log(div)
+            var name=`<h1>${loginuser.uname}</h1>`;
+            var button=`<button onclick="logout()">Logout</button>`;
+            console.log(name);
+            div.innerHTML=name;
+            divforlogout.innerHTML=button;
         }
-        console.log(finalData,"finalData here");
-        divtoshowproduct.innerHTML=finalData;
-
-
-
-        alert("working");
-        var user= JSON.parse(localStorage.getItem("login"));
-        var div=document.getElementById("switch");
-        var divforLogout=document.getElementById("Logout");
-        var name=`<p>${user.uname}</p>`;
-        var button = `<button onclick ="Logout()">Logout</button>`;
-        div.innerHTML=name;
-        divforLogout.innerHTML=button;
     }
-
-    function Logout(){
-        alert("Logout successful");
-        localStorage.removeItem("login");
+    function redirect(product){
+        var singlemovie=JSON.stringify(product);
+        // console.log(singlemovie);
+        // alert("working");
+        localStorage.setItem("curreent-movie",singlemovie);
+        window.location.href='./singlepage.html';
+    }
+    function logout(){
+        alert("logout successfiully");
+        localStorage.removeItem("hloginuser");
         window.location.reload();
 
     }
-
-   </script>
-
-
+</script
 </body>
 </html>
