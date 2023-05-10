@@ -298,7 +298,7 @@
                             <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/7588/177588-v"/>
                         </div>
                         <div>
-                            <h3>PRISONBREAK</h3>
+                            <h3 i="mname">PRISONBREAK</h3>
                             <p>2017 .5 Seasons .English .U/A 16+</p>
                             <p>Action | Mystery</p>
                             <button>Wacth Now</button>
@@ -384,13 +384,13 @@
         </div>
         <script>
             window.onload = function(){
-                var currentUser= JSON.parse(localStorage.getItem("hotstarCurrentUser"))
-                var userdata = JSON.parse(localStorage.getItem("hotstarUserData"))
-                var divToAppendProductimage = document.getElementById("productimage");
-                var divToAppendProductprice = document.getElementById("productprice");
-                var divToAppendProductname = document.getElementById("productname");
-                var divToAppendallProducts = document.getElementById("left");
-    
+                var currentUser= JSON.parse(localStorage.getItem("hotstsarCurrentUser"))
+                var userdata = JSON.parse(localStorage.getItem("hUserData"))
+                // var divToAppendProductimage = document.getElementById("productimage");
+                // var divToAppendProductprice = document.getElementById("productprice");
+                // var divToAppendProductname = document.getElementById("productname");
+                var divToAppendallProducts = document.querySelector(".left");
+                var divname=document.getElementById("mname");
     
     
                 var products;
@@ -399,10 +399,10 @@
                         products= userdata[i].cartProducts
                     }
                 }
-                var finalproductimage="";
-                var finalproductprice="";
-                var finalproductname="";
-    
+                // var finalproductimage="";
+                // var finalproductprice="";
+                // var finalproductname="";
+                var name="";
                 var finalcart="";
     
                 for(var i=0; i<products.length; i++){
@@ -417,17 +417,16 @@
                             <P><Span><i class="fa-thin fa-square"></i></Span>Add Gift Message</P>
                         </div>
     
-                    </div>`
-    
-                    // finalData+= `<div> <img src='${products[i].proimage}'/> 
-                    //     <br/> <h2>${products[i].proname}</h2>
-                    //     <br/><h3>${products[i].proprice}</h3></div>`
+                    </div>`;
+                    name+=`${products[i].proname}`;
+                    
+                   
                 }
-               divToAppendProductimage.innerHTML= finalproductimage;
-               divToAppendProductname.innerHTML=finalproductname;
-               divToAppendProductprice.innerHTML=finalproductprice;
+            //    divToAppendProductimage.innerHTML= finalproductimage;
+            //    divToAppendProductname.innerHTML=finalproductname;
+            //    divToAppendProductprice.innerHTML=finalproductprice;
                divToAppendallProducts.innerHTML=finalcart;
-    
+                divname.innerHTML=name;
             }
         </script>
     

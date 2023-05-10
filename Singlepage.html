@@ -440,14 +440,13 @@
         <div id="body">
             <div id="movie">
                 <div id="moviename">
-                    <img
-                        src="https://img1.hotstarext.com/image/upload/f_auto,h_136/sources/r1/cms/prod/7773/1367773-t-d0d007d150e9" />
-                    <p>2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto,h_136/sources/r1/cms/prod/7773/1367773-t-d0d007d150e9" /> -->
+                    <p id="hname">2022 . 2h 57m . Telugu <span>U/A 17+</span></p>
                     <p>Under the british Raj,two revolutionaries with personsal agendas forge a friendship,only to find
                         each othre on opposing sides.</p>
                     <p>Action | Drama</p>
 
-                    <div>
+                    <div id="cart">
                         <button><span><i class="fa-solid fa-arrow-right"></i></span> Watch Now</button>
                         <button>+</button>
                     </div>
@@ -539,18 +538,25 @@
 <script>
     window.onload = function () {
         // alert("working")
-        var product = JSON.parse(localStorage.getItem("hotstarCurrentProduct"));
+        var product = JSON.parse(localStorage.getItem("current-product"));
 
-        var divToAppendProduct = document.getElementById("movie");
-        var structure = `<div> <img src='${product.proimage}' /></div><div> <img src='${product.proimage}' /> 
-            <br/> <h1>${product.proname}</h1><br/> <p>${product.proprice}</p><br/>
-             <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`;
-        console.log(structure, "here");
-        divToAppendProduct.innerHTML = structure;
+        // var divToAppendProduct = document.querySelector("#movie");
+        var divimage = document.querySelector("#movie");
+        var divname=document.querySelector("#hname");
+        var divcart=document.getElementById("cart");
+        // var structure = `<div> <img src='${product.proimage}' /></div><div> <img src='${product.proimage}' /> 
+        //     <br/> <h1>${product.proname}</h1><br/> <p>${product.proprice}</p><br/>
+        //      <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`;
+        var name=`${product.proname}`;
+        var cart=`<button  onclick='addCart(${JSON.stringify(product)})'>Add to cart</button>`;
+        // console.log(structure, "here");
+        divname.innerHTML = name;
+        divcart.innerHTML=cart;
+        divimage.style.backgroundImage=`url(${product.proimage})`;
     }
     function addCart(product){
         alert("Adding to cart");
-        var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
+        var currentUser = JSON.parse(localStorage.getItem("hotstsarCurrentUser"))
 
           // console.log(currentUser.uemail);
           var userdata = JSON.parse(localStorage.getItem("hotstarUserData"));
@@ -568,7 +574,7 @@
                     window.location.href = "./cart.html"
                 }
             }
-            localStorage.setItem("hotstarUserData", JSON.stringify(userdata))
+            localStorage.setItem("hUserData", JSON.stringify(userdata))
     }
 
 </script>
