@@ -713,10 +713,10 @@
       <script>
     window.onload=function(){
         // alert("working")
-        var loginuser=JSON.parse(localStorage.getItem("hloginuser"))
+        var loginuser=JSON.parse(localStorage.getItem("loginuser"))
         var divformovies=document.getElementById("product")
             var finaldata="";
-            var moviefromls=JSON.parse(localStorage.getItem("hmovies"));
+            var moviefromls=JSON.parse(localStorage.getItem("movies"));
             for(var i=0;i<productfromls.length;i++){
                 finaldata+=`<div onClick ='redirect(${JSON.stringify(productfromls[i])})'id="singlemovie"><img src="${moviefromls[i].addurl}" /></div>`
             }
@@ -744,7 +744,7 @@
     }
     function logout(){
         alert("logout successfiully");
-        localStorage.removeItem("hloginuser");
+        localStorage.removeItem("loginuser");
         window.location.reload();
 
     }

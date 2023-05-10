@@ -14,7 +14,7 @@ function signup(event){
 
             if(password==confirmpassword){
 
-                var hotstar=JSON.parse(localStorage.getItem("user")) || []
+                var hotstar=JSON.parse(localStorage.getItem("hotstarusers")) || []
                 
                 var flag =false;
 
@@ -31,8 +31,14 @@ function signup(event){
                 else{
                     var hdata ={uname:name,uemail:email,upassword:password,uconfirmpassword:confirmpassword}
                     hotstar.push(hdata);
-                    localStorage.setItem("user",JSON.stringify(hotstar))
+                    localStorage.setItem("hotstarusers",JSON.stringify(hotstar))
+                    alert("signup sucessfully")
+                    document.getElementById("name").value=''
+                    document.getElementById("email").value=''
+                    document.getElementById("password").value=''
+                    document.getElementById("confirmpassword").value=''
                     window.location.href="./login.html"
+                    
                
                 }
 
@@ -70,7 +76,7 @@ function login(event){
     var loginuser={};
 
     if(lemail && lpassword){
-        var hotstarl =JSON.parse(localStorage.getItem("user"));
+        var hotstarl =JSON.parse(localStorage.getItem("hotstarusers"));
          var flag =false;
          for(var i=0; i<hotstarl.length; i++){
             if(hotstarl[i].uemail==lemail){
@@ -84,6 +90,8 @@ function login(event){
             localStorage.setItem("login",JSON.stringify(loginuser))
             alert("login successful");
             window.location.href="./Homepage.html"
+            document.getElementById("lemail").value=''
+            document.getElementById("lpassword").value=''
          }
          else{
             alert("caredential are match");
