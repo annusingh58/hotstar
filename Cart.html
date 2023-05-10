@@ -386,9 +386,7 @@
             window.onload = function(){
                 var currentUser= JSON.parse(localStorage.getItem("hotstsarCurrentUser"))
                 var userdata = JSON.parse(localStorage.getItem("hUserData"))
-                // var divToAppendProductimage = document.getElementById("productimage");
-                // var divToAppendProductprice = document.getElementById("productprice");
-                // var divToAppendProductname = document.getElementById("productname");
+              
                 var divToAppendallProducts = document.querySelector(".left");
                 var divname=document.getElementById("mname");
     
@@ -399,9 +397,7 @@
                         products= userdata[i].cartProducts
                     }
                 }
-                // var finalproductimage="";
-                // var finalproductprice="";
-                // var finalproductname="";
+               
                 var name="";
                 var finalcart="";
     
