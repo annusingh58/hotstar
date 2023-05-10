@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>multipledynamics</title>
     <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
    <style>
     *{
@@ -478,13 +478,13 @@
                     </div>
     
                 </div>
-                <!-- <div id="productsT"></div> -->
-                <div class ="body1">
+                <div id="productsT"></div>
+                <!-- <div class ="body1"> -->
                   
                             <p>Latest & trending</p>
                             
                         
-                        <div  class="latest">
+                        <!-- <div  class="latest">
 
                           
                             <div>
@@ -515,9 +515,9 @@
                         <div>
                             <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/8442/1478442-v-c0f317dcf6a8"alt="hotstar"/>
                         </div>
-                     </div>
+                     </div> -->
                     
-                </div>
+                <!-- </div>
                 <div class ="body1">
                   
                     <p>Watchlist</p>
@@ -672,7 +672,7 @@
                             
                         </div>
 
-                 </div> 
+                 </div>  -->
                  <div id="footer">
                     <div>
                         <h4>Company</h4>
@@ -717,7 +717,8 @@
         var finalData="";
         var productFromLS=JSON.parse(localStorage.getItem("product"));
         for(i=0;i<productFromLS.length;i++){
-            finalData+=`<div id="singlePro">
+            finalData+=`<div onclick='redirect(${JSON.stringify(productFromLS[i])})'id="singlePro">
+
                 <img src=${productFromLS[i].proimage} />
                 <h3>${productFromLS[i].proname}</h3>
                 <p>${productFromLS[i].proprice}</p>
@@ -738,6 +739,12 @@
         div.innerHTML=name;
         divforLogout.innerHTML=button;
     }
+    function redirect(product){
+                var singleProduct=JSON.stringify(product);
+                alert("working");
+                localStorage.setItem("current-product",singleProduct)
+                window.location.href='./singlepage.html'
+            }
 
     function Logout(){
         alert("Logout successful");
