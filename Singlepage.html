@@ -390,11 +390,7 @@
             }
         }
     </style>
-   <script>
-    window.onload=function(){
-     
-    }
-</script>
+  
 
 
 </head>
@@ -540,5 +536,41 @@
     </div>
 
 </body>
+<script>
+    window.onload = function () {
+        // alert("working")
+        var product = JSON.parse(localStorage.getItem("hotstarCurrentProduct"));
+
+        var divToAppendProduct = document.getElementById("movie");
+        var structure = `<div> <img src='${product.proimage}' /></div><div> <img src='${product.proimage}' /> 
+            <br/> <h1>${product.proname}</h1><br/> <p>${product.proprice}</p><br/>
+             <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`;
+        console.log(structure, "here");
+        divToAppendProduct.innerHTML = structure;
+    }
+    function addCart(product){
+        alert("Adding to cart");
+        var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
+
+          // console.log(currentUser.uemail);
+          var userdata = JSON.parse(localStorage.getItem("hotstarUserData"));
+            for (var i = 0; i<userdata.length; i++) {
+                if (currentUser.uemail == userdata[i].uemail) {
+                    alert("mil gya");
+                    if (userdata[i].cartProducts === undefined) {
+                        // userdata[i].cartProducts = "hello"
+
+                        userdata[i].cartProducts = [product];
+                    } else {
+                        userdata[i].cartProducts.push(product);
+                    }
+                    alert("Product added to cart")
+                    window.location.href = "./cart.html"
+                }
+            }
+            localStorage.setItem("hotstarUserData", JSON.stringify(userdata))
+    }
+
+</script>
 
 </html>

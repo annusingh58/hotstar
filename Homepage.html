@@ -713,10 +713,10 @@
       <script>
     window.onload=function(){
         // alert("working")
-        var loginuser=JSON.parse(localStorage.getItem("loginuser"))
+        var user=JSON.parse(localStorage.getItem("hotstarlogin"))
         var divformovies=document.getElementById("product")
             var finaldata="";
-            var moviefromls=JSON.parse(localStorage.getItem("movies"));
+            var productfromls=JSON.parse(localStorage.getItem("hotstarProducts"));
             for(var i=0;i<productfromls.length;i++){
                 finaldata+=`<div onClick ='redirect(${JSON.stringify(productfromls[i])})'id="singlemovie"><img src="${moviefromls[i].addurl}" /></div>`
             }
@@ -739,12 +739,12 @@
         var singlemovie=JSON.stringify(product);
         // console.log(singlemovie);
         // alert("working");
-        localStorage.setItem("curreent-movie",singlemovie);
+        localStorage.setItem("hotstarcurreentmovie",singlemovie);
         window.location.href='./singlepage.html';
     }
     function logout(){
         alert("logout successfiully");
-        localStorage.removeItem("loginuser");
+        localStorage.removeItem("hotstarlogin");
         window.location.reload();
 
     }

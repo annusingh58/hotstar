@@ -382,6 +382,54 @@
                 
 
         </div>
+        <script>
+            window.onload = function(){
+                var currentUser= JSON.parse(localStorage.getItem("hotstarCurrentUser"))
+                var userdata = JSON.parse(localStorage.getItem("hotstarUserData"))
+                var divToAppendProductimage = document.getElementById("productimage");
+                var divToAppendProductprice = document.getElementById("productprice");
+                var divToAppendProductname = document.getElementById("productname");
+                var divToAppendallProducts = document.getElementById("left");
+    
+    
+    
+                var products;
+                for(var i=0; i<userdata.length; i++){
+                    if(currentUser.uemail== userdata[i].uemail){
+                        products= userdata[i].cartProducts
+                    }
+                }
+                var finalproductimage="";
+                var finalproductprice="";
+                var finalproductname="";
+    
+                var finalcart="";
+    
+                for(var i=0; i<products.length; i++){
+                   finalcart +=`<div>
+                        <div id="productimage">
+                            "<img src="${products[i].proimage}" />
+                        </div>
+                        <div>
+                            <P id="productname">${products[i].proname}</P>
+                            <P>511618JGRABA002EA007682</P>
+                            <P id="productprice">${products[i].proprice}</P>
+                            <P><Span><i class="fa-thin fa-square"></i></Span>Add Gift Message</P>
+                        </div>
+    
+                    </div>`
+    
+                    // finalData+= `<div> <img src='${products[i].proimage}'/> 
+                    //     <br/> <h2>${products[i].proname}</h2>
+                    //     <br/><h3>${products[i].proprice}</h3></div>`
+                }
+               divToAppendProductimage.innerHTML= finalproductimage;
+               divToAppendProductname.innerHTML=finalproductname;
+               divToAppendProductprice.innerHTML=finalproductprice;
+               divToAppendallProducts.innerHTML=finalcart;
+    
+            }
+        </script>
     
     
 </body>

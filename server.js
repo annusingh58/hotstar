@@ -1,6 +1,6 @@
 function signup(event){
     event.preventDefault();
-    // alert("working");
+    alert("working");
     var name=document.getElementById("name").value;
     var email=document.getElementById("email").value;
     var password=document.getElementById("password").value;
@@ -14,7 +14,7 @@ function signup(event){
 
             if(password==confirmpassword){
 
-                var hotstar=JSON.parse(localStorage.getItem("hotstarusers")) || []
+                var hotstar=JSON.parse(localStorage.getItem("hotstarUserData")) || []
                 
                 var flag =false;
 
@@ -31,7 +31,7 @@ function signup(event){
                 else{
                     var hdata ={uname:name,uemail:email,upassword:password,uconfirmpassword:confirmpassword}
                     hotstar.push(hdata);
-                    localStorage.setItem("hotstarusers",JSON.stringify(hotstar))
+                    localStorage.setItem("hotstarUserData",JSON.stringify(hotstar))
                     alert("signup sucessfully")
                     document.getElementById("name").value=''
                     document.getElementById("email").value=''
@@ -76,7 +76,7 @@ function login(event){
     var loginuser={};
 
     if(lemail && lpassword){
-        var hotstarl =JSON.parse(localStorage.getItem("hotstarusers"));
+        var hotstarl =JSON.parse(localStorage.getItem("hotstarUserData"));
          var flag =false;
          for(var i=0; i<hotstarl.length; i++){
             if(hotstarl[i].uemail==lemail){
@@ -87,7 +87,7 @@ function login(event){
 
          }
          if(flag==true){
-            localStorage.setItem("login",JSON.stringify(loginuser))
+            localStorage.setItem("hotstsarCurrentUser",JSON.stringify(loginuser))
             alert("login successful");
             window.location.href="./Homepage.html"
             document.getElementById("lemail").value=''
